@@ -1,6 +1,6 @@
 package fila;
+
 import java.util.LinkedList;
-import java.util.List;
 
 public class Fila<Tipo> {
 
@@ -11,63 +11,58 @@ public class Fila<Tipo> {
     }
 
     public Tipo remove() {
-        if(! vazia())
+        if (!vazia()) {
             return this.objetos.remove(0);
-        else
-            return null; 
+        } else {
+            return null;
+        }
     }
 
     public boolean vazia() {
         return this.objetos.size() == 0;
     }
-    
+
     public String toString() {
         return objetos.toString();
     }
-    
-     public int tamanho() {
+
+    public int tamanho() {
         return objetos.size();
     }
-    
+
     public Tipo espia() {
-        if(! vazia())
+        if (!vazia()) {
             return objetos.get(0);
-        else
-            return null;    
+        } else {
+            return null;
+        }
     }
-    
-    public int verificaElemento(Tipo elemento){
-          return objetos.indexOf(elemento); 
-    }   
-    
+
+    public int verificaElemento(Tipo elemento) {
+
+        return objetos.indexOf(elemento);
+    }
+
     public static void main(String[] args) {
 
-        // teste
-        String a1 = new String ("Bruno");
-        String a2 = new String ("Rafael");
-        String a3 = new String ("Leonardo");
-        
-        Fila<String> fila = new Fila<String>();
+        Aluno aluno = new Aluno("Bruno", 20);
 
-        // inserção de elementos
-        fila.insere(a1);
-        fila.insere(a2);
-        fila.insere(a3);
+        Fila<Object> fila = new Fila<Object>();
 
-        // retorna a fila
-        System.out.println("Fila: " + fila);
+        fila.insere(aluno);
+        fila.insere("Clesio");
+        fila.insere("Rafael");
+        System.out.println(fila);
 
-        // função espia
-        System.out.println("Espia: " + fila.espia());
+        Aluno a1 = (Aluno) fila.remove();
+        System.out.println(a1);
 
-        // remoção de elementos
-        System.out.println("Removido: " + fila.remove());
-        System.out.println("Removido: " + fila.remove());
+        Fila<Aluno> filaAluno = new Fila<Aluno>();
+        filaAluno.insere(aluno);
 
-        // função vazia
-        System.out.println("Fila está vazia? " + fila.vazia());
+        Aluno a2 = filaAluno.remove();
+        System.out.println(a2);
 
-        // verifica o tamanho da fila
-        System.out.println("Tamanho da fila: " + fila.tamanho());
     }
+
 }
