@@ -59,7 +59,6 @@ public class ListaSobrenome implements Serializable {
     }
 
     // Método para carregar a lista de pessoas de um arquivo
-    @SuppressWarnings("unchecked")
     public void carregarListaDeArquivo() {
         // Janela de seleção de arquivo para carregar
         JFileChooser fileChooser = new JFileChooser();
