@@ -24,6 +24,6 @@ class Pessoa implements Serializable {
     // Formatação da String
     @Override
     public String toString() {
-        return "Nome: " + nome + ", Sobrenome: " + sobrenome + ", Idade: " + idade;
+        return nome + " " + sobrenome + ", " + idade + " anos";
     }
 }
