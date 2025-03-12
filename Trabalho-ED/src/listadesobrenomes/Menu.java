@@ -20,9 +20,9 @@ public class Menu {
                     + "1. Incluir pessoa na LISTA\n"
                     + "2. Deletar pessoa da LISTA\n"
                     + "3. Mostrar LISTA de pessoas\n"
-                    + "4. Inserir lista de pessoas numa FILA (ordenada por idade)\n"
+                    + "4. Inserir lista de pessoas numa FILA\n"
                     + "5. Criar N PILHAS para pessoas com o mesmo sobrenome\n"
-                    + "6. Inserir lista de pessoas numa ARVORE (ordenada por idade)\n"
+                    + "6. Inserir lista de pessoas numa ARVORE\n"
                     + "7. Salvar Lista\n"
                     + "0. Sair\n"
                     + "Escolha uma opção:";
